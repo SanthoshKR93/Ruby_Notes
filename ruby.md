@@ -270,3 +270,123 @@ end
 ```
 
 ### Logical Operators
+
+- (&&)  # and -  both true then true both false then false else false in all conditions.
+- (||)  # or - both true then true both false then false either of them true then true.
+- (!)   # not - if true then false and if false then true.
+
+### case statements
+
+It uses a case expression and when statements for evaluating cases.
+
+```
+days = 12
+case days
+when 12
+ puts "12 days"
+when 10
+ puts "10 days"
+else
+ puts "invalid days"
+end 
+```
+
+### Ranges
+
+Range represents a sequence. 
+There are two range operators in Ruby 
+
+- (..)           # upper and lower limit included.
+- (...)          # Lower limit not included.
+
+```
+a = (1..7).to_a
+puts a
+# [1,2,3,4,5,6,7]
+```
+
+<b>NOTE</b><br>
+- 'to_a' method is used to explicitly convert a range into an array. 
+- Range can be used in case statements together with 'when'  
+
+### Loops
+
+#### while
+
+while loop executes as long as the condition specified in the while statement remains true.
+Because of that the while statements must consist of a break condition so that at some point the execution of the while loop is terminated.
+```
+while condition
+statements
+ if condition
+  break
+ end
+end
+```
+
+#### until
+
+until statement is the opposite of while statement. That is the loop body executes if the condition is false and terminates when the condition turns out to be true.
+
+```
+until condition
+statements
+ if condition
+  statements
+ end
+end
+```
+
+#### for
+
+The for loop iterates over a range of values and executes the statement that much time the loop executes.
+
+```
+for i in (1..10)
+ puts i
+end
+```
+<b>break</b><br>
+break statement exits the loop and terminates further execution of the loop.
+
+```
+for i in 1..5
+ break if i>3
+ puts i
+end
+```
+
+<b>next</b><br>
+next statement skips the cuttent iteration and moves on to the next without exiting the loop.
+
+```
+for i in 1..10
+ next if i%2 == 0
+ puts i
+end
+```
+
+<b>redo</b><br>
+This statement results in repeated execution of the current loop iteration.
+
+<b>retry</b><br>
+This statement causes the whole loop to start again from the beginning.
+
+#### loop do
+
+it works like a normal loop which executes according to the conditions given in its code block.If the execution is not made to stop by breaking, the loop will run for ever.
+
+```
+val = 1
+loop do
+ val = val+1
+ puts val
+ break if val>5
+end
+```
+
+## Collections
+
+### Arrays
+
+
